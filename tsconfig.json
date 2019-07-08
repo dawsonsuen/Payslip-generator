@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-
     "sourceMap": true,
     "target": "es5",
-    "jsx": "react",
-    "module": "commonjs",
+    "jsx": "preserve",
+    "module": "esnext",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -23,7 +22,14 @@
       "dom"
     ],
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": false
+    "noUnusedLocals": false,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
   "exclude": [
     "dist",
@@ -31,6 +37,9 @@
     "node_modules",
     "scripts",
     "webpack",
-    "jest",
+    "jest"
+  ],
+  "include": [
+    "src"
   ]
 }

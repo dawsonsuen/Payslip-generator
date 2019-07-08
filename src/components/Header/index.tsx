@@ -13,6 +13,7 @@ import {
   Navbar,
   Collapse,
   UncontrolledDropdown,
+  Container,
 } from 'reactstrap';
 import { inject } from 'mobx-react';
 import { UserStore } from '../../stores/UserStore';
@@ -39,39 +40,24 @@ class Header extends React.Component<{ AuthStore?: UserStore }, { dropdownOpen: 
 
   render() {
     return (
-      <div className="app-header">
-        <Navbar color="dark" light expand="md">
-          <NavbarBrand href="/">Myob</NavbarBrand>
+      <Navbar className="app-header" color="white" light expand="md">
+        <Container>
+          <NavbarBrand href="/">
+            <img alt="Logo 1" className="center-block img-responsive logo-img logo-1-img" src="/Images/myob-logo.svg" />
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="/">Logout</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                <NavLink href="https://github.com/dawsonsuen">GitHub</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
           </Collapse>
-        </Navbar>
-      </div>
+        </Container>
+      </Navbar>
     )
   }
 }

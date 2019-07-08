@@ -1,13 +1,33 @@
 import * as React from 'react';
 import AppConstants from '../../AppConstants';
+import { Navbar, Container, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
 
 class Footer extends React.Component {
   render() {
     return (
       <footer className="app-footer">
-        <span><a href="http://meetleelou.com">meetleelou.com</a> &copy; {AppConstants.APP_COPYRIGHT_YEAR} Leelou Operations. v{AppConstants.APP_VER}</span>
-        <span className="ml-auto">Powered by <a href="http://meetleelou.com">Leelou</a></span>
+        <Nav style={{background:'#fff'}}>
+          <Container>
+            <NavbarBrand href="/">
+              <img alt="Logo 1" className="center-block img-responsive logo-img logo-1-img" src="/Images/myob-logo.svg" />
+            </NavbarBrand>
+            <NavItem>
+              <NavLink href="#">Link1</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#">Link2</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#">Link3</NavLink>
+            </NavItem>
+          </Container>
+        </Nav>
+        <Navbar color="dark" expand="md">
+          <Container>
+            <div><span className="text-white">Develeped by</span> <a href="http://dawsonsuen.github.io/">Dongchen Sun</a></div>
+          </Container>
+        </Navbar>
       </footer>
     )
   }

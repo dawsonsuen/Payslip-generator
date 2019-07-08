@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { HashRouter, Route, Switch, Redirect, withRouter } from 'react-router-dom';
@@ -17,6 +17,7 @@ interface IAuthStore {
 const state = {
     AuthStore: userStore,
 } as AppState;
+
 const app = withRouter(MainRouter);
 
 ReactDOM.render((
