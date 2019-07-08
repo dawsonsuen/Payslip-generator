@@ -1,23 +1,10 @@
-# Payslip-generator
-
-## Install
-
-    $ git clone https://github.com/dawsonsuen/Payslip-generator.git
-    $ cd Payslip-generator
-    $ npm install
-
-## Configure app
-
-Open `tsconfig.json` then overwrite it with the following code:
-
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-
     "sourceMap": true,
     "target": "es5",
-    "jsx": "react",
-    "module": "commonjs",
+    "jsx": "preserve",
+    "module": "esnext",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -35,7 +22,14 @@ Open `tsconfig.json` then overwrite it with the following code:
       "dom"
     ],
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": false
+    "noUnusedLocals": false,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
   "exclude": [
     "dist",
@@ -43,20 +37,9 @@ Open `tsconfig.json` then overwrite it with the following code:
     "node_modules",
     "scripts",
     "webpack",
-    "jest",
+    "jest"
+  ],
+  "include": [
+    "src"
   ]
 }
-
-## Start & watch
-
-    $ npm start
-    The default "Username" and "Password" are "myobtest".
-## Languages & tools
-
-### HTML
-
-### TypeScript
-
-### CSS
-
-### JSX
